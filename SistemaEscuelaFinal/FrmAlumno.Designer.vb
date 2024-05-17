@@ -63,6 +63,7 @@ Partial Class frmAlumno
         'txtTel
         '
         Me.txtTel.Location = New System.Drawing.Point(301, 64)
+        Me.txtTel.MaxLength = 10
         Me.txtTel.Name = "txtTel"
         Me.txtTel.Size = New System.Drawing.Size(120, 20)
         Me.txtTel.TabIndex = 37
@@ -70,6 +71,7 @@ Partial Class frmAlumno
         'txtNSS
         '
         Me.txtNSS.Location = New System.Drawing.Point(89, 57)
+        Me.txtNSS.MaxLength = 11
         Me.txtNSS.Name = "txtNSS"
         Me.txtNSS.Size = New System.Drawing.Size(120, 20)
         Me.txtNSS.TabIndex = 36

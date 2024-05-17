@@ -2,14 +2,65 @@
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class frmAlumno
+
+    Sub ObtenerConsecutivo()
+        Dim consecutivo, TMP As String
+        consecutivo = ""
+        TMP = ""
+        Try
+            conn.Open()
+            If conn.State = ConnectionState.Open Then
+                Query = "SELECT TOP 1 CONVERT(INTEGER,Matrícula)+1 AS Matrícula FROM Alumno ORDER BY Matrícula DESC"
+                cmd = New SqlClient.SqlCommand(Query, conn)
+                cmd.ExecuteNonQuery()
+                sqlread = cmd.ExecuteReader
+
+                While sqlread.Read
+                    consecutivo = sqlread("Matrícula")
+                End While
+                sqlread.Close()
+                cmd.Dispose()
+                conn.Close()
+                For i = consecutivo.Length + 1 To 6
+                    TMP = TMP + "0"
+                Next i
+                consecutivo = TMP + consecutivo
+                txtMatricula.Text = consecutivo
+            Else
+                MsgBox("Conexión fallida")
+            End If
+        Catch ex As Exception
+            MsgBox("Error: " + ex.Message)
+        End Try
+    End Sub
+
     Private Sub frmAlumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenaGrid()
+        ObtenerConsecutivo()
     End Sub
-    Sub FiltraGrid()
+    Sub FiltraGridMatricula()
         Try
             conn.Open()
             If conn.State = ConnectionState.Open Then
                 Dim query As String = "select * from alumno where Matrícula like '%" & txtMatricula.Text & "%'"
+                Dim adapter As New SqlDataAdapter(query, conn)
+                Dim dataSet As New DataSet()
+                adapter.Fill(dataSet, "Results")
+                dgAlumnos.DataSource = dataSet.Tables("Results")
+                conn.Close()
+            Else
+                MsgBox("Error en la conexión")
+            End If
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message)
+        End Try
+    End Sub
+
+    Sub FiltraGridNombre()
+        Try
+            conn.Open()
+            If conn.State = ConnectionState.Open Then
+                Dim query As String = "select * from alumno where Nombre like '%" & txtNombre.Text & "%'"
                 Dim adapter As New SqlDataAdapter(query, conn)
                 Dim dataSet As New DataSet()
                 adapter.Fill(dataSet, "Results")
@@ -45,7 +96,7 @@ Public Class frmAlumno
         End Try
     End Sub
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtMatricula.TextChanged
-        FiltraGrid()
+        FiltraGridMatricula()
     End Sub
     Private Sub DataGridView1_SelectionChanged(sender As Object, e As EventArgs) Handles dgAlumnos.SelectionChanged
         If dgAlumnos.SelectedRows.Count > 0 Then 'Si hay una fila seleccionada
@@ -138,37 +189,6 @@ Public Class frmAlumno
             MsgBox("Verifique que ha llenado todos los campos antes de actualizar un alumno.")
         End If
     End Sub
-    Sub BorrarAlumno()
-        If txtMatricula.Text <> "" Then
-            Try
-                conn.Open()
-                If conn.State = ConnectionState.Open Then
-                    If txtMatricula.Text <> "" Then
-
-                    End If
-                    cmd = conn.CreateCommand
-                    cmd.CommandType = CommandType.StoredProcedure
-                    cmd.CommandText = "EliminarAlumno"
-                    cmd.Parameters.Add("@Matrícula", SqlDbType.Char).Value = txtMatricula.Text.ToString
-                    cmd.ExecuteNonQuery()
-                    MsgBox("El alumno se eliminó correctamente")
-                Else
-                    MsgBox("Error en la conexión")
-                End If
-            Catch ex As Exception
-                MsgBox("Error: " & ex.Message)
-            Finally
-                If cmd IsNot Nothing Then
-                    cmd.Dispose()
-                End If
-                conn.Close()
-                Borrar()
-            End Try
-        Else
-            MsgBox("Error. Debe seleccionar la matrícula del alumno a borrar.")
-        End If
-
-    End Sub
     Sub Borrar()
         txtMatricula.Clear()
         txtNombre.Clear()
@@ -185,11 +205,15 @@ Public Class frmAlumno
         ActualizarAlumno()
     End Sub
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles DelAlumno.Click
-        BorrarAlumno()
+        Borrar()
     End Sub
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles alumno_grupo.Click
-        Form7.Show()
+
+    Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
+        FiltraGridNombre()
     End Sub
+    'Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles alumno_grupo.Click
+    '    Form7.Show()
+    'End Sub
 
     'Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles TextBox5.TextChanged
 
