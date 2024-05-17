@@ -74,10 +74,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionVB.vb" />
-    <Compile Include="FrmAlumno.Designer.vb">
-      <DependentUpon>FrmAlumno.vb</DependentUpon>
+    <Compile Include="frmAlumno.Designer.vb">
+      <DependentUpon>frmAlumno.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmAlumno.vb">
+    <Compile Include="frmAlumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.vb">
@@ -104,8 +110,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FrmAlumno.resx">
-      <DependentUpon>FrmAlumno.vb</DependentUpon>
+    <EmbeddedResource Include="frmAlumno.resx">
+      <DependentUpon>frmAlumno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
