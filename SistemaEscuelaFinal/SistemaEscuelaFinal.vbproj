@@ -74,10 +74,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionVB.vb" />
-    <Compile Include="FrmAlumno.Designer.vb">
-      <DependentUpon>FrmAlumno.vb</DependentUpon>
+    <Compile Include="frmAlumno.Designer.vb">
+      <DependentUpon>frmAlumno.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmAlumno.vb">
+    <Compile Include="frmAlumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlumnoGrupo.Designer.vb">
+      <DependentUpon>frmAlumnoGrupo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlumnoGrupo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaestros.Designer.vb">
+      <DependentUpon>frmMaestros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaestros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.vb">
@@ -91,6 +109,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -102,10 +121,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ObtenerID.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FrmAlumno.resx">
-      <DependentUpon>FrmAlumno.vb</DependentUpon>
+    <EmbeddedResource Include="frmAlumno.resx">
+      <DependentUpon>frmAlumno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlumnoGrupo.resx">
+      <DependentUpon>frmAlumnoGrupo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaestros.resx">
+      <DependentUpon>frmMaestros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
