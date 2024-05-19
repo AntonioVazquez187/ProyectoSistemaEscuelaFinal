@@ -80,6 +80,18 @@
     <Compile Include="frmAlumno.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAlumnoGrupo.Designer.vb">
+      <DependentUpon>frmAlumnoGrupo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlumnoGrupo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaestros.Designer.vb">
+      <DependentUpon>frmMaestros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaestros.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMenu.Designer.vb">
       <DependentUpon>frmMenu.vb</DependentUpon>
     </Compile>
@@ -109,10 +121,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ObtenerID.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmAlumno.resx">
       <DependentUpon>frmAlumno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlumnoGrupo.resx">
+      <DependentUpon>frmAlumnoGrupo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaestros.resx">
+      <DependentUpon>frmMaestros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.vb</DependentUpon>

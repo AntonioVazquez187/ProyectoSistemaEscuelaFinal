@@ -1,8 +1,6 @@
 ﻿Imports System.Data.SqlClient
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
-Public Class frmAlumno
-
+Public Class frmMaestros
     Sub ObtenerConsecutivo()
         Dim consecutivo, TMP As String
         consecutivo = ""
@@ -10,7 +8,7 @@ Public Class frmAlumno
         Try
             conn.Open()
             If conn.State = ConnectionState.Open Then
-                Query = "SELECT TOP 1 CONVERT(INTEGER,Matrícula)+1 AS Matrícula FROM Alumno ORDER BY Matrícula DESC"
+                Query = "SELECT TOP 1 CONVERT(INTEGER,Matrícula)+1 AS Matrícula FROM Maestro ORDER BY Matrícula DESC"
                 cmd = New SqlClient.SqlCommand(Query, conn)
                 cmd.ExecuteNonQuery()
                 sqlread = cmd.ExecuteReader
@@ -33,16 +31,11 @@ Public Class frmAlumno
             MsgBox("Error: " + ex.Message)
         End Try
     End Sub
-
-    Private Sub frmAlumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        llenaGrid()
-        ObtenerConsecutivo()
-    End Sub
     Sub FiltraGridMatricula()
         Try
             conn.Open()
             If conn.State = ConnectionState.Open Then
-                Dim query As String = "select * from alumno where Matrícula like '%" & txtMatricula.Text & "%'"
+                Dim query As String = "select * from Maestro where Matrícula like '%" & txtMatricula.Text & "%'"
                 Dim adapter As New SqlDataAdapter(query, conn)
                 Dim dataSet As New DataSet()
                 adapter.Fill(dataSet, "Results")
@@ -60,7 +53,7 @@ Public Class frmAlumno
         Try
             conn.Open()
             If conn.State = ConnectionState.Open Then
-                Dim query As String = "select * from alumno where Nombre like '%" & txtNombre.Text & "%'"
+                Dim query As String = "select * from Maestro where Nombre like '%" & txtNombre.Text & "%'"
                 Dim adapter As New SqlDataAdapter(query, conn)
                 Dim dataSet As New DataSet()
                 adapter.Fill(dataSet, "Results")
@@ -79,7 +72,7 @@ Public Class frmAlumno
             conn.Open()
             If conn.State = ConnectionState.Open Then
                 ' Definir la consulta SQL
-                Dim query As String = "select * from alumno"
+                Dim query As String = "select * from maestro"
                 ' Crear un adaptador de datos y un conjunto de datos
                 Dim adapter As New SqlDataAdapter(query, conn)
                 Dim dataSet As New DataSet()
@@ -120,14 +113,14 @@ Public Class frmAlumno
         End If
     End Sub
     Sub NuevoAlumno()
-        If cmbEstado.Text <> "BAJA DEF" And cmbEstado.Text <> "BAJA TEMP" And cmbEstado.Text <> "IRREGULAR" Then
+        If cmbEstado.Text <> "INACTIVO" Then
             If txtMatricula.Text <> "" And txtNombre.Text <> "" And txtNSS.Text <> "" And txtTel.Text <> "" And rtxtDireccion.Text <> "" And cmbEstado.Text <> "" Then
                 Try
                     conn.Open()
                     If conn.State = ConnectionState.Open Then
                         cmd = conn.CreateCommand
                         cmd.CommandType = CommandType.StoredProcedure
-                        cmd.CommandText = "NuevoAlumno"
+                        cmd.CommandText = "NuevoMaestro"
                         cmd.Parameters.Add("@Matrícula", SqlDbType.Char).Value = txtMatricula.Text
                         cmd.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = txtNombre.Text
                         cmd.Parameters.Add("@NSS", SqlDbType.VarChar).Value = txtNSS.Text
@@ -136,7 +129,7 @@ Public Class frmAlumno
                         cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = rtxtDireccion.Text
                         cmd.Parameters.Add("@estado", SqlDbType.VarChar).Value = cmbEstado.Text
                         cmd.ExecuteNonQuery()
-                        MsgBox("El alumno se agrego correctamente")
+                        MsgBox("El maestró se agrego correctamente")
                     Else
                         MsgBox("Error en la conexión")
                     End If
@@ -150,10 +143,10 @@ Public Class frmAlumno
                     Borrar()
                 End Try
             Else
-                MsgBox("Verifique que ha llenado todos los campos antes de agregar un nuevo alumno.")
+                MsgBox("Verifique que ha llenado todos los campos antes de agregar un nuevo maestro.")
             End If
         Else
-            MsgBox("El alumno de nuevo ingreso solo puede tener estado REGULAR")
+            MsgBox("El maestro recién ingresado a la institución solo puede tener estado ACTIVO")
         End If
 
     End Sub
@@ -164,7 +157,7 @@ Public Class frmAlumno
                 If conn.State = ConnectionState.Open Then
                     cmd = conn.CreateCommand
                     cmd.CommandType = CommandType.StoredProcedure
-                    cmd.CommandText = "ActualizaAlumno"
+                    cmd.CommandText = "ActualizaMaestro"
                     cmd.Parameters.Add("@Matrícula", SqlDbType.Char).Value = txtMatricula.Text
                     cmd.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = txtNombre.Text
                     cmd.Parameters.Add("@NSS", SqlDbType.VarChar).Value = txtNSS.Text
@@ -174,7 +167,7 @@ Public Class frmAlumno
                     cmd.Parameters.Add("@estado", SqlDbType.VarChar).Value = cmbEstado.Text
                     cmd.ExecuteNonQuery()
                     cmd.Dispose()
-                    MsgBox("El alumno se actualizó correctamente")
+                    MsgBox("El maestro se actualizó correctamente")
                 Else
                     MsgBox("Error en la conexión")
                 End If
@@ -188,7 +181,7 @@ Public Class frmAlumno
                 Borrar()
             End Try
         Else
-            MsgBox("Verifique que ha llenado todos los campos antes de actualizar un alumno.")
+            MsgBox("Verifique que ha llenado todos los campos antes de actualizar un maestro.")
         End If
     End Sub
     Sub Borrar()
@@ -214,10 +207,10 @@ Public Class frmAlumno
         FiltraGridNombre()
     End Sub
 
-    Private Sub alumno_grupo_Click(sender As Object, e As EventArgs) Handles alumno_grupo.Click
-        frmAlumnoGrupo.Show()
+    Private Sub frmMaestros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        llenaGrid()
+        ObtenerConsecutivo()
     End Sub
-
     'Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles alumno_grupo.Click
     '    Form7.Show()
     'End Sub
