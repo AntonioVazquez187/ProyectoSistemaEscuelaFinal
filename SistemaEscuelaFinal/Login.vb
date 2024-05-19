@@ -54,4 +54,8 @@ Public Class Login
         PictureBox4.Visible = True
         PictureBox3.Visible = False
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+    End Sub
 End Class
