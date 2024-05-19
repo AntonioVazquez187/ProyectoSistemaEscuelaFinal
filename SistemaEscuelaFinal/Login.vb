@@ -1,8 +1,4 @@
 ﻿Public Class Login
-
-Mario2
-Public Class Login
-    Dim com As New SqlCommand
     Sub Acceso()
         Try
             conn.Open()
@@ -58,5 +54,4 @@ Public Class Login
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
     End Sub
-TadeoNew
 End Class
