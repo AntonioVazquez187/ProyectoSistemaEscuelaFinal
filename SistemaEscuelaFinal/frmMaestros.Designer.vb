@@ -226,6 +226,8 @@ Partial Class frmMaestros
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Fuchsia
+        Me.BackgroundImage = Global.SistemaEscuelaFinal.My.Resources.Resources._193417477_arco_iris_abstracto_de_moda_fondo_borroso_ilustración_de_vector_de_acuarela_suave_para_web
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(766, 447)
         Me.Controls.Add(Me.cmbEstado)
         Me.Controls.Add(Me.Label7)

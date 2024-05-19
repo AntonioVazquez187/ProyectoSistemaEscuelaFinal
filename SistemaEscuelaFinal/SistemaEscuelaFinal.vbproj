@@ -158,5 +158,8 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\193417477-arco-iris-abstracto-de-moda-fondo-borroso-ilustración-de-vector-de-acuarela-suave-para-web.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
