@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusquedaAlumno.Designer.vb">
+      <DependentUpon>BusquedaAlumno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusquedaAlumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ConexionVB.vb" />
     <Compile Include="frmAlumno.Designer.vb">
       <DependentUpon>frmAlumno.vb</DependentUpon>
@@ -124,6 +130,9 @@
     <Compile Include="ObtenerID.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BusquedaAlumno.resx">
+      <DependentUpon>BusquedaAlumno.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAlumno.resx">
       <DependentUpon>frmAlumno.vb</DependentUpon>
     </EmbeddedResource>

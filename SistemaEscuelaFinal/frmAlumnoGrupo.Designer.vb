@@ -34,7 +34,6 @@ Partial Class frmAlumnoGrupo
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncontrarAlumnoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncoontrarGrupoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -132,31 +131,21 @@ Partial Class frmAlumnoGrupo
         'EncontrarAlumnoToolStripMenuItem
         '
         Me.EncontrarAlumnoToolStripMenuItem.Name = "EncontrarAlumnoToolStripMenuItem"
-        Me.EncontrarAlumnoToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.EncontrarAlumnoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EncontrarAlumnoToolStripMenuItem.Text = "Encontrar alumno"
         '
         'EncoontrarGrupoToolStripMenuItem
         '
         Me.EncoontrarGrupoToolStripMenuItem.Name = "EncoontrarGrupoToolStripMenuItem"
-        Me.EncoontrarGrupoToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
-        Me.EncoontrarGrupoToolStripMenuItem.Text = "Encoontrar grupo"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(376, 62)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 73
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.EncoontrarGrupoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EncoontrarGrupoToolStripMenuItem.Text = "Encontrar grupo"
         '
         'frmAlumnoGrupo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Fuchsia
+        Me.BackColor = System.Drawing.Color.BlueViolet
         Me.ClientSize = New System.Drawing.Size(457, 159)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.cmbGrupo)
         Me.Controls.Add(Me.Label3)
@@ -187,5 +176,4 @@ Partial Class frmAlumnoGrupo
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EncontrarAlumnoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EncoontrarGrupoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Button1 As Button
 End Class
