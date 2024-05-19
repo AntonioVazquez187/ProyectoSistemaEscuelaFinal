@@ -92,6 +92,12 @@
     <Compile Include="frmAlumnoGrupo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmBusquedaAlumno.Designer.vb">
+      <DependentUpon>frmBusquedaAlumno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusquedaAlumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMaestros.Designer.vb">
       <DependentUpon>frmMaestros.vb</DependentUpon>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAlumnoGrupo.resx">
       <DependentUpon>frmAlumnoGrupo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusquedaAlumno.resx">
+      <DependentUpon>frmBusquedaAlumno.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMaestros.resx">
       <DependentUpon>frmMaestros.vb</DependentUpon>
