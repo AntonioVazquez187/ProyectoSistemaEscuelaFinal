@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusquedaAlumno.Designer.vb">
+      <DependentUpon>BusquedaAlumno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusquedaAlumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ConexionVB.vb" />
     <Compile Include="frmAlumno.Designer.vb">
       <DependentUpon>frmAlumno.vb</DependentUpon>
