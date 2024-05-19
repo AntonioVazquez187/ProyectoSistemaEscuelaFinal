@@ -76,7 +76,7 @@ Partial Class frmAlumnoGrupo
         Me.cmbAlumno.FormattingEnabled = True
         Me.cmbAlumno.Location = New System.Drawing.Point(78, 80)
         Me.cmbAlumno.Name = "cmbAlumno"
-        Me.cmbAlumno.Size = New System.Drawing.Size(234, 21)
+        Me.cmbAlumno.Size = New System.Drawing.Size(255, 21)
         Me.cmbAlumno.TabIndex = 68
         '
         'Label6
@@ -155,6 +155,8 @@ Partial Class frmAlumnoGrupo
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Fuchsia
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(457, 159)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label8)
