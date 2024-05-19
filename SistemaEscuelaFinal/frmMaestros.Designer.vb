@@ -145,7 +145,7 @@ Partial Class frmMaestros
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(330, 34)
+        Me.txtNombre.Location = New System.Drawing.Point(335, 34)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(120, 20)
         Me.txtNombre.TabIndex = 47

@@ -58,7 +58,7 @@ Partial Class frmMenu
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Black
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(240, 113)
+        Me.PictureBox3.Location = New System.Drawing.Point(266, 159)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(381, 250)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -218,9 +218,9 @@ Partial Class frmMenu
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(302, 0)
+        Me.PictureBox1.Location = New System.Drawing.Point(313, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(300, 63)
+        Me.PictureBox1.Size = New System.Drawing.Size(244, 63)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False

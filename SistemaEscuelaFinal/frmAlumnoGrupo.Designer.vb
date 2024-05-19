@@ -83,7 +83,7 @@ Partial Class frmAlumnoGrupo
         Me.cmbAlumno.FormattingEnabled = True
         Me.cmbAlumno.Location = New System.Drawing.Point(78, 68)
         Me.cmbAlumno.Name = "cmbAlumno"
-        Me.cmbAlumno.Size = New System.Drawing.Size(234, 21)
+        Me.cmbAlumno.Size = New System.Drawing.Size(255, 21)
         Me.cmbAlumno.TabIndex = 68
         '
         'Label6
