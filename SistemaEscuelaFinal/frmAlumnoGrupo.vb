@@ -47,4 +47,31 @@
             MsgBox("Error en la conexión." + ex.ToString)
         End Try
     End Sub
+
+    Private Sub picAgg_Click(sender As Object, e As EventArgs) Handles picAgg.Click
+        If cmbAlumno.Text <> "" And cmbGrupo.Text <> "" Then
+            Dim matricula, id_gpo As String
+            matricula = CType(cmbAlumno.Items(cmbAlumno.SelectedIndex), ObtenerID).ItemData
+            id_gpo = CType(cmbGrupo.Items(cmbGrupo.SelectedIndex), ObtenerID).ItemData
+            Try
+            conn.Open()
+                If conn.State = ConnectionState.Open Then
+                    cmd = conn.CreateCommand
+                    cmd.CommandType = CommandType.StoredProcedure
+                    cmd.CommandText = "NuevoAlumnoGrupo"
+                    cmd.Parameters.Add("@id_alumno", SqlDbType.Char).Value = matricula
+                    cmd.Parameters.Add("@id_grupo", SqlDbType.Char).Value = id_gpo
+                    cmd.ExecuteNonQuery()
+                    MsgBox("El alumno se asignó al grupo correctamente")
+                    cmd.Dispose()
+                    conn.Close()
+                    limpiar()
+                Else
+                    MsgBox("Error en la conexión")
+                End If
+            Catch ex As Exception
+                MsgBox("Error en la conexión." + ex.Message)
+            End Try
+        End If
+    End Sub
 End Class
