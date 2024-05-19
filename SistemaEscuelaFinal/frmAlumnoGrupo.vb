@@ -1,4 +1,5 @@
 ﻿Public Class frmAlumnoGrupo
+    Private ignoreTextChanged As Boolean = False
     Private Sub frmAlumnoGrupo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -42,14 +43,6 @@
             sqlread.Close()
             cmd.Dispose()
             conn.Close()
-        Catch ex As Exception
-            MsgBox("Error en la conexión." + ex.ToString)
-        End Try
-    End Sub
-
-    Private Sub cmbAlumno_TextChanged(sender As Object, e As EventArgs) Handles cmbAlumno.TextChanged
-        Try
-
         Catch ex As Exception
             MsgBox("Error en la conexión." + ex.ToString)
         End Try
