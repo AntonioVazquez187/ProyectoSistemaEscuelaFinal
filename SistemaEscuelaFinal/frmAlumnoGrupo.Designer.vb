@@ -143,18 +143,31 @@ Partial Class frmAlumnoGrupo
         '
         'Button1
         '
+Mario2
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(376, 62)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 75
+
         Me.Button1.Location = New System.Drawing.Point(359, 56)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 73
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
+TadeoNew
         '
         'frmAlumnoGrupo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.BlueViolet
+Mario2
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+
+TadeoNew
         Me.ClientSize = New System.Drawing.Size(457, 159)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label8)
