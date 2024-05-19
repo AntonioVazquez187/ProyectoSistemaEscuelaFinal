@@ -130,6 +130,9 @@
     <Compile Include="ObtenerID.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BusquedaAlumno.resx">
+      <DependentUpon>BusquedaAlumno.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAlumno.resx">
       <DependentUpon>frmAlumno.vb</DependentUpon>
     </EmbeddedResource>
