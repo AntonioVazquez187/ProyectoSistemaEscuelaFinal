@@ -86,16 +86,53 @@
     <Compile Include="frmAlumnoGrupo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAsignaMateria.Designer.vb">
+      <DependentUpon>frmAsignaMateria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsignaMateria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsignaPlanMateria.Designer.vb">
+      <DependentUpon>frmAsignaPlanMateria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsignaPlanMateria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBusquedaAlumno.Designer.vb">
       <DependentUpon>frmBusquedaAlumno.vb</DependentUpon>
     </Compile>
     <Compile Include="frmBusquedaAlumno.vb">
       <SubType>Form</SubType>
     </Compile>
+
     <Compile Include="frmBusquedaGrupo.Designer.vb">
       <DependentUpon>frmBusquedaGrupo.vb</DependentUpon>
     </Compile>
     <Compile Include="frmBusquedaGrupo.vb">
+
+    <Compile Include="frmCarrera.Designer.vb">
+      <DependentUpon>frmCarrera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarrera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGrupos.Designer.vb">
+      <DependentUpon>frmGrupos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGrupos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHorarios.Designer.vb">
+      <DependentUpon>frmHorarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHorarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKardex.Designer.vb">
+      <DependentUpon>frmKardex.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKardex.vb">
+
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMaestros.Designer.vb">
@@ -104,10 +141,22 @@
     <Compile Include="frmMaestros.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMaterias.Designer.vb">
+      <DependentUpon>frmMaterias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaterias.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMenu.Designer.vb">
       <DependentUpon>frmMenu.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNvoKardex.Designer.vb">
+      <DependentUpon>frmNvoKardex.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNvoKardex.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.vb">
@@ -142,17 +191,43 @@
     <EmbeddedResource Include="frmAlumnoGrupo.resx">
       <DependentUpon>frmAlumnoGrupo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAsignaMateria.resx">
+      <DependentUpon>frmAsignaMateria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsignaPlanMateria.resx">
+      <DependentUpon>frmAsignaPlanMateria.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBusquedaAlumno.resx">
       <DependentUpon>frmBusquedaAlumno.vb</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="frmBusquedaGrupo.resx">
       <DependentUpon>frmBusquedaGrupo.vb</DependentUpon>
+
+    <EmbeddedResource Include="frmCarrera.resx">
+      <DependentUpon>frmCarrera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGrupos.resx">
+      <DependentUpon>frmGrupos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHorarios.resx">
+      <DependentUpon>frmHorarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKardex.resx">
+      <DependentUpon>frmKardex.vb</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="frmMaestros.resx">
       <DependentUpon>frmMaestros.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMaterias.resx">
+      <DependentUpon>frmMaterias.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNvoKardex.resx">
+      <DependentUpon>frmNvoKardex.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

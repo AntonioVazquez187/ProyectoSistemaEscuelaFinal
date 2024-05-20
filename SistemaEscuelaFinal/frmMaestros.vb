@@ -211,11 +211,8 @@ Public Class frmMaestros
         llenaGrid()
         ObtenerConsecutivo()
     End Sub
-    'Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles alumno_grupo.Click
-    '    Form7.Show()
-    'End Sub
 
-    'Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles TextBox5.TextChanged
-
-    'End Sub
+    Private Sub AsignaMateriaBt_Click(sender As Object, e As EventArgs) Handles AsignaMateriaBt.Click
+        frmAsignaMateria.Show()
+    End Sub
 End Class

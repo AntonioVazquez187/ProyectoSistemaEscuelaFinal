@@ -41,10 +41,12 @@ Partial Class frmMaestros
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.AsignaMateriaBt = New System.Windows.Forms.PictureBox()
         CType(Me.DelAlumno, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ActAlumno, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AggAlumno, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgAlumnos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AsignaMateriaBt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmbEstado
@@ -221,12 +223,24 @@ Partial Class frmMaestros
         Me.Label1.TabIndex = 40
         Me.Label1.Text = "Matricula"
         '
+        'AsignaMateriaBt
+        '
+        Me.AsignaMateriaBt.BackColor = System.Drawing.Color.Transparent
+        Me.AsignaMateriaBt.Image = CType(resources.GetObject("AsignaMateriaBt.Image"), System.Drawing.Image)
+        Me.AsignaMateriaBt.Location = New System.Drawing.Point(722, 403)
+        Me.AsignaMateriaBt.Name = "AsignaMateriaBt"
+        Me.AsignaMateriaBt.Size = New System.Drawing.Size(32, 32)
+        Me.AsignaMateriaBt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.AsignaMateriaBt.TabIndex = 59
+        Me.AsignaMateriaBt.TabStop = False
+        '
         'frmMaestros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Fuchsia
         Me.ClientSize = New System.Drawing.Size(766, 447)
+        Me.Controls.Add(Me.AsignaMateriaBt)
         Me.Controls.Add(Me.cmbEstado)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtTel)
@@ -252,6 +266,7 @@ Partial Class frmMaestros
         CType(Me.ActAlumno, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AggAlumno, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgAlumnos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AsignaMateriaBt, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -275,4 +290,5 @@ Partial Class frmMaestros
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents AsignaMateriaBt As PictureBox
 End Class
