@@ -136,7 +136,7 @@ Public Class frmAlumnoGrupo
                 End While
                 sqlread.Close()
 
-
+                'ayudame dios
                 Dim query As String
                 query = "Select distinct g.semestre, c.nombre, g.turno from grupo As g
                     Join carrera as c on g.Id_carrera=c.num_plan WHERE g.Id_grupo Like '%" & cmbGrupo.Text & "%'"

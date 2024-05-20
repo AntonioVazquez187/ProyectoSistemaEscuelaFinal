@@ -18,7 +18,7 @@ Public Class frmAsignaPlanMateria
                 sqlread = cmd.ExecuteReader
 
                 While sqlread.Read
-                    consecutivo = sqlread("Id_materia")
+                    consecutivo = sqlread("id")
                 End While
                 sqlread.Close()
                 cmd.Dispose()
@@ -110,7 +110,7 @@ Public Class frmAsignaPlanMateria
             conn.Close()
             borrar()
             LlenaID()
-            'llenaIdPlan()
+            llenaIdPlan()
             llenaIdMateria()
         End Try
     End Sub
