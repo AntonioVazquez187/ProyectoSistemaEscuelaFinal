@@ -51,7 +51,7 @@ Partial Class frmMaestros
         '
         Me.cmbEstado.FormattingEnabled = True
         Me.cmbEstado.Items.AddRange(New Object() {"ACTIVO", "INACTIVO"})
-        Me.cmbEstado.Location = New System.Drawing.Point(335, 115)
+        Me.cmbEstado.Location = New System.Drawing.Point(295, 109)
         Me.cmbEstado.Name = "cmbEstado"
         Me.cmbEstado.Size = New System.Drawing.Size(120, 21)
         Me.cmbEstado.TabIndex = 58
@@ -61,7 +61,7 @@ Partial Class frmMaestros
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(280, 110)
+        Me.Label7.Location = New System.Drawing.Point(240, 104)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(40, 13)
         Me.Label7.TabIndex = 57
@@ -69,7 +69,7 @@ Partial Class frmMaestros
         '
         'txtTel
         '
-        Me.txtTel.Location = New System.Drawing.Point(335, 76)
+        Me.txtTel.Location = New System.Drawing.Point(295, 70)
         Me.txtTel.MaxLength = 10
         Me.txtTel.Name = "txtTel"
         Me.txtTel.Size = New System.Drawing.Size(120, 20)
@@ -77,7 +77,7 @@ Partial Class frmMaestros
         '
         'txtNSS
         '
-        Me.txtNSS.Location = New System.Drawing.Point(123, 69)
+        Me.txtNSS.Location = New System.Drawing.Point(83, 63)
         Me.txtNSS.MaxLength = 11
         Me.txtNSS.Name = "txtNSS"
         Me.txtNSS.Size = New System.Drawing.Size(120, 20)
@@ -87,7 +87,7 @@ Partial Class frmMaestros
         '
         Me.DelAlumno.BackColor = System.Drawing.Color.Transparent
         Me.DelAlumno.Image = CType(resources.GetObject("DelAlumno.Image"), System.Drawing.Image)
-        Me.DelAlumno.Location = New System.Drawing.Point(169, 115)
+        Me.DelAlumno.Location = New System.Drawing.Point(129, 109)
         Me.DelAlumno.Name = "DelAlumno"
         Me.DelAlumno.Size = New System.Drawing.Size(32, 32)
         Me.DelAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -98,7 +98,7 @@ Partial Class frmMaestros
         '
         Me.ActAlumno.BackColor = System.Drawing.Color.Transparent
         Me.ActAlumno.Image = CType(resources.GetObject("ActAlumno.Image"), System.Drawing.Image)
-        Me.ActAlumno.Location = New System.Drawing.Point(124, 115)
+        Me.ActAlumno.Location = New System.Drawing.Point(84, 109)
         Me.ActAlumno.Name = "ActAlumno"
         Me.ActAlumno.Size = New System.Drawing.Size(32, 32)
         Me.ActAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -109,7 +109,7 @@ Partial Class frmMaestros
         '
         Me.AggAlumno.BackColor = System.Drawing.Color.Transparent
         Me.AggAlumno.Image = CType(resources.GetObject("AggAlumno.Image"), System.Drawing.Image)
-        Me.AggAlumno.Location = New System.Drawing.Point(85, 115)
+        Me.AggAlumno.Location = New System.Drawing.Point(45, 109)
         Me.AggAlumno.Name = "AggAlumno"
         Me.AggAlumno.Size = New System.Drawing.Size(32, 32)
         Me.AggAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -119,14 +119,14 @@ Partial Class frmMaestros
         'dgAlumnos
         '
         Me.dgAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgAlumnos.Location = New System.Drawing.Point(71, 153)
+        Me.dgAlumnos.Location = New System.Drawing.Point(31, 147)
         Me.dgAlumnos.Name = "dgAlumnos"
         Me.dgAlumnos.Size = New System.Drawing.Size(630, 261)
         Me.dgAlumnos.TabIndex = 50
         '
         'rtxtDireccion
         '
-        Me.rtxtDireccion.Location = New System.Drawing.Point(557, 79)
+        Me.rtxtDireccion.Location = New System.Drawing.Point(517, 73)
         Me.rtxtDireccion.Name = "rtxtDireccion"
         Me.rtxtDireccion.Size = New System.Drawing.Size(144, 48)
         Me.rtxtDireccion.TabIndex = 49
@@ -137,7 +137,7 @@ Partial Class frmMaestros
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(488, 78)
+        Me.Label6.Location = New System.Drawing.Point(448, 72)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(52, 13)
         Me.Label6.TabIndex = 48
@@ -145,7 +145,7 @@ Partial Class frmMaestros
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(330, 34)
+        Me.txtNombre.Location = New System.Drawing.Point(290, 28)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(120, 20)
         Me.txtNombre.TabIndex = 47
@@ -155,7 +155,7 @@ Partial Class frmMaestros
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(280, 79)
+        Me.Label5.Location = New System.Drawing.Point(240, 73)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(49, 13)
         Me.Label5.TabIndex = 46
@@ -163,7 +163,7 @@ Partial Class frmMaestros
         '
         'txtMatricula
         '
-        Me.txtMatricula.Location = New System.Drawing.Point(124, 34)
+        Me.txtMatricula.Location = New System.Drawing.Point(84, 28)
         Me.txtMatricula.MaxLength = 6
         Me.txtMatricula.Name = "txtMatricula"
         Me.txtMatricula.Size = New System.Drawing.Size(120, 20)
@@ -174,7 +174,7 @@ Partial Class frmMaestros
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(88, 72)
+        Me.Label4.Location = New System.Drawing.Point(48, 66)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(29, 13)
         Me.Label4.TabIndex = 44
@@ -183,7 +183,7 @@ Partial Class frmMaestros
         'dtFechaNac
         '
         Me.dtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtFechaNac.Location = New System.Drawing.Point(600, 34)
+        Me.dtFechaNac.Location = New System.Drawing.Point(560, 28)
         Me.dtFechaNac.Name = "dtFechaNac"
         Me.dtFechaNac.Size = New System.Drawing.Size(101, 20)
         Me.dtFechaNac.TabIndex = 43
@@ -193,7 +193,7 @@ Partial Class frmMaestros
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(488, 37)
+        Me.Label3.Location = New System.Drawing.Point(448, 31)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(106, 13)
         Me.Label3.TabIndex = 42
@@ -204,7 +204,7 @@ Partial Class frmMaestros
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(280, 37)
+        Me.Label2.Location = New System.Drawing.Point(240, 31)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 41
@@ -215,7 +215,7 @@ Partial Class frmMaestros
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(68, 37)
+        Me.Label1.Location = New System.Drawing.Point(28, 31)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(50, 13)
         Me.Label1.TabIndex = 40
