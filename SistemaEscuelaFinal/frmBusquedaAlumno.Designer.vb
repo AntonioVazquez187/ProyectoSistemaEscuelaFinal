@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class BusquedaAlumno
+Partial Class frmBusquedaAlumno
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -24,13 +24,13 @@ Partial Class BusquedaAlumno
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'BusquedaAlumno
+        'frmBusquedaAlumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(544, 294)
-        Me.Name = "BusquedaAlumno"
-        Me.Text = "BusquedaAlumno"
+        Me.ClientSize = New System.Drawing.Size(461, 365)
+        Me.Name = "frmBusquedaAlumno"
+        Me.Text = "frmBusquedaAlumno"
         Me.ResumeLayout(False)
 
     End Sub
