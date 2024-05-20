@@ -122,6 +122,12 @@
     <Compile Include="frmHorarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmKardex.Designer.vb">
+      <DependentUpon>frmKardex.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKardex.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMaestros.Designer.vb">
       <DependentUpon>frmMaestros.vb</DependentUpon>
     </Compile>
@@ -138,6 +144,12 @@
       <DependentUpon>frmMenu.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNvoKardex.Designer.vb">
+      <DependentUpon>frmNvoKardex.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNvoKardex.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.vb">
@@ -190,6 +202,9 @@
     <EmbeddedResource Include="frmHorarios.resx">
       <DependentUpon>frmHorarios.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmKardex.resx">
+      <DependentUpon>frmKardex.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMaestros.resx">
       <DependentUpon>frmMaestros.vb</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNvoKardex.resx">
+      <DependentUpon>frmNvoKardex.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
