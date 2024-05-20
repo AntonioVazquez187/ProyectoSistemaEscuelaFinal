@@ -28,16 +28,17 @@ Partial Class frmAlumnoGrupo
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cmbAlumno = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.picAct = New System.Windows.Forms.PictureBox()
+        Me.picAgg = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncontrarAlumnoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncoontrarGrupoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.picBuscar = New System.Windows.Forms.PictureBox()
+        CType(Me.picAct, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picAgg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.picBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label8
@@ -90,27 +91,27 @@ Partial Class frmAlumnoGrupo
         Me.Label6.TabIndex = 67
         Me.Label6.Text = "Alumno"
         '
-        'PictureBox3
+        'picAct
         '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(413, 115)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(32, 32)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox3.TabIndex = 66
-        Me.PictureBox3.TabStop = False
+        Me.picAct.BackColor = System.Drawing.Color.Transparent
+        Me.picAct.Image = CType(resources.GetObject("picAct.Image"), System.Drawing.Image)
+        Me.picAct.Location = New System.Drawing.Point(413, 115)
+        Me.picAct.Name = "picAct"
+        Me.picAct.Size = New System.Drawing.Size(32, 32)
+        Me.picAct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.picAct.TabIndex = 66
+        Me.picAct.TabStop = False
         '
-        'PictureBox1
+        'picAgg
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(359, 115)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 65
-        Me.PictureBox1.TabStop = False
+        Me.picAgg.BackColor = System.Drawing.Color.Transparent
+        Me.picAgg.Image = CType(resources.GetObject("picAgg.Image"), System.Drawing.Image)
+        Me.picAgg.Location = New System.Drawing.Point(359, 115)
+        Me.picAgg.Name = "picAgg"
+        Me.picAgg.Size = New System.Drawing.Size(32, 32)
+        Me.picAgg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.picAgg.TabIndex = 65
+        Me.picAgg.TabStop = False
         '
         'MenuStrip1
         '
@@ -139,39 +140,43 @@ Partial Class frmAlumnoGrupo
         '
         Me.EncoontrarGrupoToolStripMenuItem.Name = "EncoontrarGrupoToolStripMenuItem"
         Me.EncoontrarGrupoToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
-        Me.EncoontrarGrupoToolStripMenuItem.Text = "Encoontrar grupo"
+        Me.EncoontrarGrupoToolStripMenuItem.Text = "Encontrar grupo"
         '
-        'Button1
+        'picBuscar
         '
-        Me.Button1.Location = New System.Drawing.Point(376, 62)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 73
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.picBuscar.BackColor = System.Drawing.Color.Transparent
+        Me.picBuscar.Image = CType(resources.GetObject("picBuscar.Image"), System.Drawing.Image)
+        Me.picBuscar.Location = New System.Drawing.Point(327, 69)
+        Me.picBuscar.Name = "picBuscar"
+        Me.picBuscar.Size = New System.Drawing.Size(32, 32)
+        Me.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.picBuscar.TabIndex = 73
+        Me.picBuscar.TabStop = False
         '
         'frmAlumnoGrupo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Fuchsia
+        Me.BackColor = System.Drawing.Color.BlueViolet
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(457, 159)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.picBuscar)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.cmbGrupo)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.cmbAlumno)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.picAct)
+        Me.Controls.Add(Me.picAgg)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmAlumnoGrupo"
         Me.Text = "frmAlumnoGrupo"
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picAct, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picAgg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.picBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -181,11 +186,11 @@ Partial Class frmAlumnoGrupo
     Friend WithEvents Label3 As Label
     Friend WithEvents cmbAlumno As ComboBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents picAct As PictureBox
+    Friend WithEvents picAgg As PictureBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EncontrarAlumnoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EncoontrarGrupoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Button1 As Button
+    Friend WithEvents picBuscar As PictureBox
 End Class
