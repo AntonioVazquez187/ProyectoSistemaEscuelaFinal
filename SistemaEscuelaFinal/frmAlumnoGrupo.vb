@@ -112,6 +112,7 @@ Public Class frmAlumnoGrupo
 
     Sub BuscaGrupoAsignado()
         Dim matricula As String
+        Dim id_grupo As String = ""
         Dim encontro As Boolean = False
         matricula = CType(cmbAlumno.Items(cmbAlumno.SelectedIndex), ObtenerID).ItemData
         Try
@@ -129,21 +130,27 @@ Public Class frmAlumnoGrupo
                     Dim indice1 As Integer = cmbGrupo.FindStringExact(valorDeseado1)
                     If indice1 <> -1 Then
                         cmbGrupo.SelectedIndex = indice1
-                        encontro = True
+                        id_grupo = cmbGrupo.SelectedIndex
+                        'encontro = True
                     End If
                 End While
                 sqlread.Close()
+
+
                 Dim query As String
-                    query = "select id_grupo,semestre from grupo WHERE id_grupo='" & cmbGrupo.Text & "'"
-                    cmd = New SqlClient.SqlCommand(query, conn)
+                query = "Select distinct g.semestre, c.nombre, g.turno from grupo As g
+                    Join carrera as c on g.Id_carrera=c.num_plan WHERE g.Id_grupo Like '%" & cmbGrupo.Text & "%'"
+                cmd = New SqlClient.SqlCommand(query, conn)
                     cmd.ExecuteNonQuery()
                     sqlread = cmd.ExecuteReader
-                    While sqlread.Read
-                        cmbGrupo.Text = (New ObtenerID(sqlread("semestre"), sqlread("id_grupo"))).ToString
-                    End While
+                While sqlread.Read
+                    Dim nombre As String = sqlread("semestre") & " - " & sqlread("nombre") & "-" & sqlread("turno").ToString()
+                    cmbGrupo.Text = (New ObtenerID(nombre, id_grupo)).ToString
+                End While
                     sqlread.Close()
                     cmd.Dispose()
                 sqlread.Close()
+
             Else
                     MsgBox("Error en la conexión")
             End If

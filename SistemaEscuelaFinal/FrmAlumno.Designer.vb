@@ -80,7 +80,7 @@ Partial Class frmAlumno
         '
         Me.alumno_grupo.BackColor = System.Drawing.Color.Transparent
         Me.alumno_grupo.Image = CType(resources.GetObject("alumno_grupo.Image"), System.Drawing.Image)
-        Me.alumno_grupo.Location = New System.Drawing.Point(619, 408)
+        Me.alumno_grupo.Location = New System.Drawing.Point(619, 412)
         Me.alumno_grupo.Name = "alumno_grupo"
         Me.alumno_grupo.Size = New System.Drawing.Size(32, 32)
         Me.alumno_grupo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
