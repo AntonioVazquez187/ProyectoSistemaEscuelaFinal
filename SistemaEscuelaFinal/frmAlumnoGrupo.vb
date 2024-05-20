@@ -163,4 +163,12 @@ Public Class frmAlumnoGrupo
             conn.Close()
         End Try
     End Sub
+
+    Private Sub EncontrarAlumnoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncontrarAlumnoToolStripMenuItem.Click
+        frmBusquedaAlumno.Show()
+    End Sub
+
+    Private Sub EncoontrarGrupoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncoontrarGrupoToolStripMenuItem.Click
+        frmBusquedaGrupo.Show()
+    End Sub
 End Class
