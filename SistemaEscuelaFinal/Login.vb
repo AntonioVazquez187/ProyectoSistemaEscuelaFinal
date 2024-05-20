@@ -15,8 +15,8 @@
                 End While
                 If sqlread.HasRows Then
                     If Rol = "A" Then
-                        MsgBox("igresando como Alumno")
-                    ElseIf Rol = "m" Then
+                        MsgBox("igresando como Admin")
+                    ElseIf Rol = "M" Then
                         MsgBox("igresando como Maestro")
                     End If
                     frmMenu.Show()
