@@ -86,16 +86,34 @@
     <Compile Include="frmAlumnoGrupo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAsignaPlanMateria.Designer.vb">
+      <DependentUpon>frmAsignaPlanMateria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsignaPlanMateria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBusquedaAlumno.Designer.vb">
       <DependentUpon>frmBusquedaAlumno.vb</DependentUpon>
     </Compile>
     <Compile Include="frmBusquedaAlumno.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCarrera.Designer.vb">
+      <DependentUpon>frmCarrera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarrera.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMaestros.Designer.vb">
       <DependentUpon>frmMaestros.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMaestros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaterias.Designer.vb">
+      <DependentUpon>frmMaterias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaterias.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMenu.Designer.vb">
@@ -136,11 +154,20 @@
     <EmbeddedResource Include="frmAlumnoGrupo.resx">
       <DependentUpon>frmAlumnoGrupo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAsignaPlanMateria.resx">
+      <DependentUpon>frmAsignaPlanMateria.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBusquedaAlumno.resx">
       <DependentUpon>frmBusquedaAlumno.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCarrera.resx">
+      <DependentUpon>frmCarrera.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMaestros.resx">
       <DependentUpon>frmMaestros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaterias.resx">
+      <DependentUpon>frmMaterias.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.vb</DependentUpon>
