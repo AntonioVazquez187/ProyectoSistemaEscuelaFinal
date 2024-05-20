@@ -4,6 +4,7 @@ Public Class frmHorarios
     Private Sub frmHorarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenaMateriaAsignada()
         llenaIDS()
+        llenaDias()
     End Sub
     Sub llenaIDS()
         Dim query As String = "SELECT DISTINCT idh FROM Horario"
@@ -24,6 +25,11 @@ Public Class frmHorarios
         ComboBox1.DataSource = dataTable
         ComboBox1.DisplayMember = "id_AM"
         ComboBox1.ValueMember = "id_AM"
+    End Sub
+    Sub llenaDias()
+        Dim diasDeLaSemana As String() = {"LUN", "MAR", "MIÉ", "JUE", "VIE", "SÁB", "DOM"}
+        ComboBox3.Items.AddRange(diasDeLaSemana)
+        ComboBox3.SelectedItem = 1
     End Sub
     Sub llenaGrid()
         Try
@@ -61,7 +67,7 @@ Public Class frmHorarios
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.CommandText = "NuevoHorario"
                 cmd.Parameters.Add("@Id_AM", SqlDbType.Int).Value = ComboBox1.Text
-                cmd.Parameters.Add("@dia", SqlDbType.Char).Value = TextBox1.Text
+                cmd.Parameters.Add("@dia", SqlDbType.Char).Value = ComboBox3.SelectedValue
                 Dim timeValue As TimeSpan = DateTimePicker1.Value.TimeOfDay
                 cmd.Parameters.Add("@hora_i", SqlDbType.Time).Value = timeValue
                 timeValue = DateTimePicker2.Value.TimeOfDay
@@ -92,7 +98,7 @@ Public Class frmHorarios
                 sqlread = cmd.ExecuteReader
                 While sqlread.Read
                     ComboBox1.Text = (sqlread("id_AM"))
-                    TextBox1.Text = (sqlread("dia"))
+                    ComboBox3.Text = (sqlread("dia"))
                     Dim timeValue As TimeSpan = (sqlread("Hora_i"))
                     Dim datevalue As DateTime = DateTime.Today.Add(timeValue)
                     DateTimePicker1.Value = datevalue
@@ -144,7 +150,7 @@ Public Class frmHorarios
                 cmd.CommandText = "ActualizaHorario"
                 cmd.Parameters.Add("@idh", SqlDbType.Int).Value = ComboBox2.Text
                 cmd.Parameters.Add("@Id_AM", SqlDbType.Int).Value = ComboBox1.Text
-                cmd.Parameters.Add("@dia", SqlDbType.Char).Value = TextBox1.Text
+                cmd.Parameters.Add("@dia", SqlDbType.Char).Value = ComboBox3.SelectedValue
                 Dim timeValue As TimeSpan = DateTimePicker1.Value.TimeOfDay
                 cmd.Parameters.Add("@hora_i", SqlDbType.Time).Value = timeValue
                 timeValue = DateTimePicker2.Value.TimeOfDay
@@ -168,7 +174,7 @@ Public Class frmHorarios
     End Sub
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Dim idAM As Integer = ComboBox1.Text
-        Dim dia As String = TextBox1.Text
+        Dim dia As String = ComboBox3.Text
         Dim horaInicio As TimeSpan = DateTimePicker1.Value.TimeOfDay
         Dim horaFin As TimeSpan = DateTimePicker2.Value.TimeOfDay
         Dim Resultado As Boolean = AgregarHorario(idAM, dia, horaInicio, horaFin)
@@ -176,7 +182,7 @@ Public Class frmHorarios
             GuardaHorario()
             llenaMateriaAsignada()
             llenaIDS()
-            MsgBox("Horario agregado exitosamente.")
+            MsgBox("Sin Conflictos de hora :D.")
         Else
             MsgBox("Conflicto de horario detectado.")
         End If
@@ -192,7 +198,7 @@ Public Class frmHorarios
     End Sub
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
         Dim idAM As Integer = ComboBox1.Text
-        Dim dia As String = TextBox1.Text
+        Dim dia As String = ComboBox3.Text
         Dim horaInicio As TimeSpan = DateTimePicker1.Value.TimeOfDay
         Dim horaFin As TimeSpan = DateTimePicker2.Value.TimeOfDay
         Dim Resultado As Boolean = AgregarHorario(idAM, dia, horaInicio, horaFin)
@@ -200,11 +206,10 @@ Public Class frmHorarios
             ActualizaHorario()
             llenaMateriaAsignada()
             llenaIDS()
-            MsgBox("Horario agregado exitosamente.")
+            MsgBox("Sin Conflictos de hora :D.")
         Else
             MsgBox("Conflicto de horario detectado.")
         End If
-
     End Sub
 
     Public Function AgregarHorario(idAM As Integer, dia As String, horaInicio As TimeSpan, horaFin As TimeSpan) As Boolean
@@ -213,7 +218,6 @@ Public Class frmHorarios
 
         Using connection As New SqlConnection(connectionString)
             connection.Open()
-
             ' Verificar los horarios existentes
             Using command As New SqlCommand(query, connection)
                 command.Parameters.AddWithValue("@IdAM", idAM)
@@ -231,7 +235,6 @@ Public Class frmHorarios
                     End While
                 End Using
             End Using
-
             ' Si no hay conflicto, insertar el nuevo horario
             Dim insertQuery As String = "INSERT INTO horario (Id_AM, dia, hora_i, hora_f) VALUES (@IdAM, @Dia, @HoraInicio, @HoraFin)"
             Using insertCommand As New SqlCommand(insertQuery, connection)
