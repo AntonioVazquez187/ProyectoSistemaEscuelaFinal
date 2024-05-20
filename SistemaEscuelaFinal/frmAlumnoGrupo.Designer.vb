@@ -34,9 +34,11 @@ Partial Class frmAlumnoGrupo
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncontrarAlumnoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncoontrarGrupoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.picBuscar = New System.Windows.Forms.PictureBox()
         CType(Me.picAct, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picAgg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.picBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label8
@@ -140,6 +142,17 @@ Partial Class frmAlumnoGrupo
         Me.EncoontrarGrupoToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.EncoontrarGrupoToolStripMenuItem.Text = "Encontrar grupo"
         '
+        'picBuscar
+        '
+        Me.picBuscar.BackColor = System.Drawing.Color.Transparent
+        Me.picBuscar.Image = CType(resources.GetObject("picBuscar.Image"), System.Drawing.Image)
+        Me.picBuscar.Location = New System.Drawing.Point(327, 69)
+        Me.picBuscar.Name = "picBuscar"
+        Me.picBuscar.Size = New System.Drawing.Size(32, 32)
+        Me.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.picBuscar.TabIndex = 73
+        Me.picBuscar.TabStop = False
+        '
         'frmAlumnoGrupo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -147,6 +160,7 @@ Partial Class frmAlumnoGrupo
         Me.BackColor = System.Drawing.Color.BlueViolet
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(457, 159)
+        Me.Controls.Add(Me.picBuscar)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.cmbGrupo)
         Me.Controls.Add(Me.Label3)
@@ -162,6 +176,7 @@ Partial Class frmAlumnoGrupo
         CType(Me.picAgg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.picBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -177,4 +192,5 @@ Partial Class frmAlumnoGrupo
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EncontrarAlumnoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EncoontrarGrupoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents picBuscar As PictureBox
 End Class
