@@ -41,6 +41,7 @@ Partial Class frmMaestros
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DelAlumno, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ActAlumno, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AggAlumno, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -221,12 +222,22 @@ Partial Class frmMaestros
         Me.Label1.TabIndex = 40
         Me.Label1.Text = "Matricula"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(124, 5)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 59
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmMaestros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Fuchsia
         Me.ClientSize = New System.Drawing.Size(766, 447)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.cmbEstado)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtTel)
@@ -275,4 +286,5 @@ Partial Class frmMaestros
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
 End Class
