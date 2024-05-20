@@ -31,7 +31,7 @@
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        'Form5.Show()
+        frmMaterias.Show()
     End Sub
     Sub abrir()
         Panel2.Width = 202

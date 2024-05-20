@@ -47,4 +47,5 @@
             MsgBox("Error en la conexión." + ex.ToString)
         End Try
     End Sub
+
 End Class
