@@ -10,6 +10,7 @@
             cmd = New SqlClient.SqlCommand(Query, conn)
             cmd.ExecuteNonQuery()
             sqlread = cmd.ExecuteReader
+
             While sqlread.Read
                 cmbAlumno.Items.Add(New ObtenerID(sqlread("Nombre"), sqlread("Matrícula")))
             End While
