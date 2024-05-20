@@ -86,6 +86,12 @@
     <Compile Include="frmAlumnoGrupo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAsignaMateria.Designer.vb">
+      <DependentUpon>frmAsignaMateria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsignaMateria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmAsignaPlanMateria.Designer.vb">
       <DependentUpon>frmAsignaPlanMateria.vb</DependentUpon>
     </Compile>
@@ -102,6 +108,12 @@
       <DependentUpon>frmCarrera.vb</DependentUpon>
     </Compile>
     <Compile Include="frmCarrera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHorarios.Designer.vb">
+      <DependentUpon>frmHorarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHorarios.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMaestros.Designer.vb">
@@ -154,6 +166,9 @@
     <EmbeddedResource Include="frmAlumnoGrupo.resx">
       <DependentUpon>frmAlumnoGrupo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAsignaMateria.resx">
+      <DependentUpon>frmAsignaMateria.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAsignaPlanMateria.resx">
       <DependentUpon>frmAsignaPlanMateria.vb</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarrera.resx">
       <DependentUpon>frmCarrera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHorarios.resx">
+      <DependentUpon>frmHorarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMaestros.resx">
       <DependentUpon>frmMaestros.vb</DependentUpon>
