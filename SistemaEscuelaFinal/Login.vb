@@ -20,7 +20,7 @@
                         MsgBox("igresando como Maestro")
                     End If
                     frmMenu.Show()
-                    Me.Close()
+                    Me.Hide()
                 Else
                     MsgBox("Datos invalidos")
                 End If
@@ -40,10 +40,18 @@
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
-
+        TextBox2.PasswordChar = ""
+        PictureBox4.Visible = False
+        PictureBox3.Visible = True
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        TextBox2.PasswordChar = "*"
+        PictureBox4.Visible = True
+        PictureBox3.Visible = False
+    End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Acceso()
     End Sub
 End Class
