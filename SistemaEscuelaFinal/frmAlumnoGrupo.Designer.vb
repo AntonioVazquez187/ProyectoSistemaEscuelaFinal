@@ -133,13 +133,13 @@ Partial Class frmAlumnoGrupo
         'EncontrarAlumnoToolStripMenuItem
         '
         Me.EncontrarAlumnoToolStripMenuItem.Name = "EncontrarAlumnoToolStripMenuItem"
-        Me.EncontrarAlumnoToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.EncontrarAlumnoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EncontrarAlumnoToolStripMenuItem.Text = "Encontrar alumno"
         '
         'EncoontrarGrupoToolStripMenuItem
         '
         Me.EncoontrarGrupoToolStripMenuItem.Name = "EncoontrarGrupoToolStripMenuItem"
-        Me.EncoontrarGrupoToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.EncoontrarGrupoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EncoontrarGrupoToolStripMenuItem.Text = "Encontrar grupo"
         '
         'picBuscar

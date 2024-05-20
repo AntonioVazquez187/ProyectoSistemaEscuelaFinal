@@ -104,6 +104,12 @@
     <Compile Include="frmBusquedaAlumno.vb">
       <SubType>Form</SubType>
     </Compile>
+
+    <Compile Include="frmBusquedaGrupo.Designer.vb">
+      <DependentUpon>frmBusquedaGrupo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusquedaGrupo.vb">
+
     <Compile Include="frmCarrera.Designer.vb">
       <DependentUpon>frmCarrera.vb</DependentUpon>
     </Compile>
@@ -126,6 +132,7 @@
       <DependentUpon>frmKardex.vb</DependentUpon>
     </Compile>
     <Compile Include="frmKardex.vb">
+
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMaestros.Designer.vb">
@@ -193,6 +200,10 @@
     <EmbeddedResource Include="frmBusquedaAlumno.resx">
       <DependentUpon>frmBusquedaAlumno.vb</DependentUpon>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="frmBusquedaGrupo.resx">
+      <DependentUpon>frmBusquedaGrupo.vb</DependentUpon>
+
     <EmbeddedResource Include="frmCarrera.resx">
       <DependentUpon>frmCarrera.vb</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +215,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmKardex.resx">
       <DependentUpon>frmKardex.vb</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="frmMaestros.resx">
       <DependentUpon>frmMaestros.vb</DependentUpon>

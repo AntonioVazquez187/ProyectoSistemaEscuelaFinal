@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmBusquedaAlumno
+Partial Class frmBusquedaGrupo
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,120 +22,119 @@ Partial Class frmBusquedaAlumno
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Estado = New System.Windows.Forms.ListBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Nombre = New System.Windows.Forms.ListBox()
-        Me.Matricula = New System.Windows.Forms.ListBox()
+        Me.Semestre = New System.Windows.Forms.ListBox()
         Me.Busqueda = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Turno = New System.Windows.Forms.ListBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Estado
+        'Label3
         '
-        Me.Estado.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Estado.FormattingEnabled = True
-        Me.Estado.ItemHeight = 20
-        Me.Estado.Location = New System.Drawing.Point(533, 103)
-        Me.Estado.Name = "Estado"
-        Me.Estado.Size = New System.Drawing.Size(98, 444)
-        Me.Estado.TabIndex = 16
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(168, 56)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(68, 20)
+        Me.Label3.TabIndex = 26
+        Me.Label3.Text = "Nombre"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(36, 56)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(81, 20)
+        Me.Label2.TabIndex = 25
+        Me.Label2.Text = "Semestre"
         '
         'Nombre
         '
         Me.Nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Nombre.FormattingEnabled = True
         Me.Nombre.ItemHeight = 20
-        Me.Nombre.Location = New System.Drawing.Point(151, 103)
+        Me.Nombre.Location = New System.Drawing.Point(168, 79)
         Me.Nombre.Name = "Nombre"
         Me.Nombre.Size = New System.Drawing.Size(378, 444)
-        Me.Nombre.TabIndex = 15
+        Me.Nombre.TabIndex = 23
         '
-        'Matricula
+        'Semestre
         '
-        Me.Matricula.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Matricula.FormattingEnabled = True
-        Me.Matricula.ItemHeight = 20
-        Me.Matricula.Location = New System.Drawing.Point(19, 103)
-        Me.Matricula.Name = "Matricula"
-        Me.Matricula.Size = New System.Drawing.Size(126, 444)
-        Me.Matricula.TabIndex = 14
+        Me.Semestre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Semestre.FormattingEnabled = True
+        Me.Semestre.ItemHeight = 20
+        Me.Semestre.Location = New System.Drawing.Point(36, 79)
+        Me.Semestre.Name = "Semestre"
+        Me.Semestre.Size = New System.Drawing.Size(126, 444)
+        Me.Semestre.TabIndex = 22
         '
         'Busqueda
         '
         Me.Busqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Busqueda.Location = New System.Drawing.Point(151, 28)
+        Me.Busqueda.Location = New System.Drawing.Point(120, 12)
         Me.Busqueda.Name = "Busqueda"
         Me.Busqueda.Size = New System.Drawing.Size(378, 27)
-        Me.Busqueda.TabIndex = 13
+        Me.Busqueda.TabIndex = 21
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(70, 31)
+        Me.Label1.Location = New System.Drawing.Point(39, 15)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(75, 20)
-        Me.Label1.TabIndex = 12
+        Me.Label1.TabIndex = 20
         Me.Label1.Text = "Busqeda"
         '
-        'Label2
+        'Turno
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(19, 80)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(78, 20)
-        Me.Label2.TabIndex = 17
-        Me.Label2.Text = "Matricula"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(151, 80)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(68, 20)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Nombre"
+        Me.Turno.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Turno.FormattingEnabled = True
+        Me.Turno.ItemHeight = 20
+        Me.Turno.Location = New System.Drawing.Point(552, 79)
+        Me.Turno.Name = "Turno"
+        Me.Turno.Size = New System.Drawing.Size(126, 444)
+        Me.Turno.TabIndex = 27
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(533, 80)
+        Me.Label4.Location = New System.Drawing.Point(553, 56)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(61, 20)
-        Me.Label4.TabIndex = 19
-        Me.Label4.Text = "Estado"
+        Me.Label4.Size = New System.Drawing.Size(52, 20)
+        Me.Label4.TabIndex = 28
+        Me.Label4.Text = "Turno"
         '
-        'frmBusquedaAlumno
+        'frmBusquedaGrupo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(676, 612)
+        Me.ClientSize = New System.Drawing.Size(708, 557)
         Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Turno)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Estado)
         Me.Controls.Add(Me.Nombre)
-        Me.Controls.Add(Me.Matricula)
+        Me.Controls.Add(Me.Semestre)
         Me.Controls.Add(Me.Busqueda)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "frmBusquedaAlumno"
-        Me.Text = "frmBusquedaAlumno"
+        Me.Name = "frmBusquedaGrupo"
+        Me.Text = "frmBusquedaGrupo"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Estado As ListBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
     Friend WithEvents Nombre As ListBox
-    Friend WithEvents Matricula As ListBox
+    Friend WithEvents Semestre As ListBox
     Friend WithEvents Busqueda As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents Turno As ListBox
     Friend WithEvents Label4 As Label
 End Class
